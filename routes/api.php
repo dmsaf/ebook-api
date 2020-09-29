@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*Route::get('books', 'App\Http\Controllers\BookController@index'); // show all data
+Route::post('books', 'App\Http\Controllers\BookController@store'); // create new data
+Route::get('books', 'App\Http\Controllers\BookController@show'); // show data by id
+Route::put('books', 'App\Http\Controllers\BookController@update'); // update data
+Route::delete('books', 'App\Http\Controllers\BookController@destroy'); // delete data*/
+
+Route::resource('books', 'App\Http\Controllers\BookController');
