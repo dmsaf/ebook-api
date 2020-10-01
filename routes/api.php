@@ -25,3 +25,4 @@ Route::put('books', 'App\Http\Controllers\BookController@update'); // update dat
 Route::delete('books', 'App\Http\Controllers\BookController@destroy'); // delete data*/
 
 Route::resource('books', 'App\Http\Controllers\BookController');
+Route::resource('authors', 'App\Http\Controllers\AuthorController');
